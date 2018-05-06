@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">mvvm_InterviewTest</string>
+    <string name="url">https://m.taobao.com</string>
+    <string name="tip">请输入网址：</string>
+    <string name="rateTitle">汇率助手</string>
+    <string name="update">更新</string>
+</resources>

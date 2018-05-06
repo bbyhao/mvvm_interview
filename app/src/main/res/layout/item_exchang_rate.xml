@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="rate"
+            type="com.byy.mvvm_interviewtest.data.RateItem"/>
+    </data>
+<FrameLayout
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/shape_fl_bg_item"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:padding="15dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_gravity="start|center_vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@{rate.country}" />
+
+    <EditText
+        android:background="@null"
+        android:hint="11.1"
+        android:id="@+id/et_item_rate"
+        android:inputType="numberDecimal"
+        android:layout_gravity="end|center_vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@{rate.result}" />
+</FrameLayout>
+</layout>

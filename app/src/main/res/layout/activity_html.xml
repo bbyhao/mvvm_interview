@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.byy.mvvm_interviewtest.html.HtmlViewModel"/>
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.byy.mvvm_interviewtest.html.HtmlActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tip" />
+
+    <EditText
+        android:id="@+id/et_url"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:background="@drawable/shape_et_htmlacitity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/url"
+        android:hint="@string/url" />
+    <Button
+        android:onClick="go"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_bt_htmlacitivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="解析"
+        android:textColor="@android:color/white"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            app:url="@{viewModel.url}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            />
+    </FrameLayout>
+</LinearLayout>
+</layout>
