@@ -13,8 +13,7 @@ import org.jsoup.Jsoup
  */
 class HtmlRepository(private val context: Context) {
 
-    fun getImageData(url: String): MutableLiveData<String> {
-        val liveData = MutableLiveData<String>()
+    fun getImageData(url: String,liveData:MutableLiveData<String>): MutableLiveData<String> {
 
         doAsync({
             it.printStackTrace()

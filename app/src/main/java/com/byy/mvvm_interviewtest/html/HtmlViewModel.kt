@@ -12,9 +12,10 @@ import com.byy.mvvm_interviewtest.data.HtmlRepository
 class HtmlViewModel (private val context: Application) : AndroidViewModel(context) {
 
     private val repository=HtmlRepository(context)
+    val liveData = MutableLiveData<String>()
       var url= ObservableField<String>("https://b-ssl.duitang.com/uploads/item/201412/19/20141219231048_zVF4d.thumb.700_0.jpeg")
 
-    fun parseDesImage(url: String):MutableLiveData<String> {
-       return repository.getImageData(url)
+    fun parseDesImage(url: String){
+        repository.getImageData(url,liveData)
     }
 }
